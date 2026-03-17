@@ -75,7 +75,7 @@ export default function ProfilePage() {
 
             {/* Points card */}
             <div className="card">
-              <h3 style={{ fontFamily: 'var(--font-mono)', fontSize: 14, color: 'var(--text-muted)', marginBottom: 16 }}>// Points</h3>
+              <h3 style={{ fontFamily: 'var(--font-mono)', fontSize: 14, color: 'var(--text-muted)', marginBottom: 16 }}>{'// Points'}</h3>
               {[
                 { label: 'Total Earned', value: totalPoints, color: 'var(--accent)' },
                 { label: 'Available', value: available, color: 'var(--success)' },
@@ -91,7 +91,7 @@ export default function ProfilePage() {
             {/* Skills */}
             {skills?.length > 0 && (
               <div className="card">
-                <h3 style={{ fontFamily: 'var(--font-mono)', fontSize: 14, color: 'var(--text-muted)', marginBottom: 12 }}>// Skills</h3>
+                <h3 style={{ fontFamily: 'var(--font-mono)', fontSize: 14, color: 'var(--text-muted)', marginBottom: 12 }}>{'// Skills'}</h3>
                 <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
                   {skills.map(s => <span key={s} className="badge badge-gray">{s}</span>)}
                 </div>
@@ -104,7 +104,7 @@ export default function ProfilePage() {
             {/* Edit form */}
             {editing && (
               <div className="card" style={{ marginBottom: 24 }}>
-                <h2 style={{ fontFamily: 'var(--font-mono)', fontSize: 18, marginBottom: 20 }}>// Edit Profile</h2>
+                <h2 style={{ fontFamily: 'var(--font-mono)', fontSize: 18, marginBottom: 20 }}>{'// Edit Profile'}</h2>
                 <form onSubmit={handleSave}>
                   <div className="grid-2">
                     <div className="form-group">
@@ -138,7 +138,7 @@ export default function ProfilePage() {
             {/* Badges */}
             {badges?.length > 0 && (
               <div style={{ marginBottom: 24 }}>
-                <h2 style={{ fontFamily: 'var(--font-mono)', fontSize: 18, marginBottom: 16 }}>// Badges</h2>
+                <h2 style={{ fontFamily: 'var(--font-mono)', fontSize: 18, marginBottom: 16 }}>{'// Badges'}</h2>
                 <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
                   {badges.map(b => (
                     <div key={b.name} title={b.name} style={styles.badge}>
@@ -153,7 +153,7 @@ export default function ProfilePage() {
             {/* Contributions */}
             <div>
               <div className="section-header">
-                <h2 style={{ fontFamily: 'var(--font-mono)', fontSize: 18 }}>// Contributions</h2>
+                <h2 style={{ fontFamily: 'var(--font-mono)', fontSize: 18 }}>{'// Contributions'}</h2>
                 {isOwn && <Link to="/contributions" className="btn btn-ghost btn-sm">View All →</Link>}
               </div>
               {contributions.length > 0 ? (

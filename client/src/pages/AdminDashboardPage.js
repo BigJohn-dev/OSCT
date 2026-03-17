@@ -76,7 +76,7 @@ export default function AdminDashboardPage() {
     <div className="page">
       <div className="container">
         <div className="section-header">
-          <h1 style={{ fontFamily: 'var(--font-mono)', fontSize: 28 }}>// Admin Dashboard</h1>
+          <h1 style={{ fontFamily: 'var(--font-mono)', fontSize: 28 }}>{'// Admin Dashboard'}</h1>
           <span className="badge badge-red">Admin</span>
         </div>
 
@@ -108,7 +108,7 @@ export default function AdminDashboardPage() {
             </div>
 
             <div className="card">
-              <h2 style={{ fontFamily: 'var(--font-mono)', marginBottom: 16 }}>// Quick Actions</h2>
+              <h2 style={{ fontFamily: 'var(--font-mono)', marginBottom: 16 }}>{'// Quick Actions'}</h2>
               <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
                 <button className="btn btn-primary" onClick={() => setTab('Contributions')}>Review Pending Contributions</button>
                 <button className="btn btn-secondary" onClick={() => setTab('Projects')}>Manage Projects</button>

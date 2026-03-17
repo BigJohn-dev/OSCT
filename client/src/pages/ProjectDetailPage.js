@@ -75,7 +75,7 @@ export default function ProjectDetailPage() {
           {/* Main */}
           <div style={styles.main}>
             <div className="card">
-              <h2 style={{ fontSize: 16, marginBottom: 12, fontFamily: 'var(--font-mono)' }}>// About</h2>
+              <h2 style={{ fontSize: 16, marginBottom: 12, fontFamily: 'var(--font-mono)' }}>{'// About'}</h2>
               <p style={{ color: 'var(--text-secondary)', lineHeight: 1.8 }}>{description}</p>
               {topics?.length > 0 && (
                 <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8, marginTop: 16 }}>
@@ -100,7 +100,7 @@ export default function ProjectDetailPage() {
 
             {/* Recent contributions */}
             <div>
-              <h2 style={{ fontFamily: 'var(--font-mono)', fontSize: 18, marginBottom: 16 }}>// Recent Contributions</h2>
+              <h2 style={{ fontFamily: 'var(--font-mono)', fontSize: 18, marginBottom: 16 }}>{'// Recent Contributions'}</h2>
               {contributions.length > 0 ? (
                 <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
                   {contributions.map(c => <ContributionCard key={c._id} contribution={c} />)}
@@ -114,7 +114,7 @@ export default function ProjectDetailPage() {
           {/* Sidebar */}
           <div style={styles.sidebar}>
             <div className="card">
-              <h3 style={{ fontFamily: 'var(--font-mono)', fontSize: 14, marginBottom: 16, color: 'var(--text-muted)' }}>// Stats</h3>
+              <h3 style={{ fontFamily: 'var(--font-mono)', fontSize: 14, marginBottom: 16, color: 'var(--text-muted)' }}>{'// Stats'}</h3>
               {[
                 { label: '⭐ Stars', value: stars?.toLocaleString() },
                 { label: '🍴 Forks', value: forks?.toLocaleString() },

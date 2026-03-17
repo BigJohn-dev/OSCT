@@ -46,7 +46,7 @@ export default function RewardsPage() {
       <div className="container">
         <div className="section-header">
           <div>
-            <h1 style={{ fontFamily: 'var(--font-mono)', fontSize: 28 }}>// Rewards</h1>
+            <h1 style={{ fontFamily: 'var(--font-mono)', fontSize: 28 }}>{'// Rewards'}</h1>
             <p style={{ color: 'var(--text-secondary)', marginTop: 4 }}>Redeem your points for real-world rewards</p>
           </div>
           <div style={styles.pointsBox}>
@@ -84,7 +84,7 @@ export default function RewardsPage() {
 
         {/* Points breakdown */}
         <div style={{ marginBottom: 40 }}>
-          <h2 style={{ fontFamily: 'var(--font-mono)', fontSize: 18, marginBottom: 20 }}>// Points Breakdown</h2>
+          <h2 style={{ fontFamily: 'var(--font-mono)', fontSize: 18, marginBottom: 20 }}>{'// Points Breakdown'}</h2>
           <div className="grid-4">
             {[
               { type: 'Bug Fix', pts: 10, icon: '🐛' },
@@ -108,7 +108,7 @@ export default function RewardsPage() {
         {/* Redemption history */}
         {redemptions.length > 0 && (
           <div>
-            <h2 style={{ fontFamily: 'var(--font-mono)', fontSize: 18, marginBottom: 16 }}>// Redemption History</h2>
+            <h2 style={{ fontFamily: 'var(--font-mono)', fontSize: 18, marginBottom: 16 }}>{'// Redemption History'}</h2>
             <div className="card" style={{ padding: 0, overflow: 'hidden' }}>
               <div className="table-wrap">
                 <table>

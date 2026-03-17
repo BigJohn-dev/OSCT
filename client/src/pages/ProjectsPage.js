@@ -45,7 +45,7 @@ export default function ProjectsPage() {
       <div className="container">
         <div className="section-header">
           <div>
-            <h1 style={{ fontFamily: 'var(--font-mono)', fontSize: 28 }}>// Projects</h1>
+            <h1 style={{ fontFamily: 'var(--font-mono)', fontSize: 28 }}>{'// Projects'}</h1>
             <p style={{ color: 'var(--text-secondary)', marginTop: 4 }}>{total} open-source projects to contribute to</p>
           </div>
         </div>
