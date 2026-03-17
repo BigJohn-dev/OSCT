@@ -1,138 +1,119 @@
 # Open Source Contribution Tracker (OSCT)
 
-## Overview
-The Open Source Contribution Tracker (OSCT) is a web application designed to help developers track their contributions to open-source projects. By participating, developers can earn points based on their contributions, fostering a collaborative environment and rewarding engagement.
+A web application that helps developers track their open-source contributions, earn points, and engage with the community.
 
 ## Features
-- **User Profiles**: Create and manage profiles showcasing skills and contributions.
-- **Project Listings**: Explore a curated list of open-source projects to contribute to.
-- **Contribution Tracking**: Automatically track contributions via GitHub or manually log contributions.
-- **Points System**: Earn points for various types of contributions, with leaderboards for friendly competition.
-- **Reward System**: Redeem points for discounts on courses, premium content, or mentorship.
-- **Community Engagement**: Participate in forums, discussions, and regular challenges.
-- **Admin Dashboard**: Manage projects, monitor contributions, and adjust the point system.
+
+- 🧑 **User Profiles** – Create and manage profiles showcasing skills and contributions
+- 📁 **Project Listings** – Explore curated open-source projects to contribute to
+- 🔗 **Contribution Tracking** – Track via GitHub API or manually log contributions
+- 🏆 **Points System** – Earn points with leaderboards for friendly competition
+- 🎁 **Reward System** – Redeem points for courses, content, or mentorship
+- 💬 **Community Engagement** – Forums, discussions, and challenges
+- 🛠 **Admin Dashboard** – Manage projects, monitor contributions, adjust point system
 
 ## Tech Stack
-- **Frontend**: React or Vue.js
-- **Backend**: Node.js with Express
-- **Database**: MongoDB or PostgreSQL
-- **Authentication**: OAuth for GitHub integration
-- **Hosting**: Heroku or Vercel
 
-## Project Structure
-```
-osct/
-├── client/                  # Frontend application
-│   ├── public/              # Static files
-│   ├── src/                 # Source files
-│   │   ├── components/      # React components
-│   │   ├── pages/           # Page components
-│   │   ├── services/        # API services
-│   │   ├── App.js           # Main application component
-│   │   └── index.js         # Entry point
-│   └── package.json         # Frontend dependencies
-├── server/                  # Backend application
-│   ├── models/              # Database models
-│   ├── routes/              # API routes
-│   ├── controllers/         # Business logic
-│   ├── middleware/          # Middleware functions
-│   ├── config/              # Configuration files
-│   ├── app.js               # Express application setup
-│   └── package.json         # Backend dependencies
-├── .env                     # Environment variables
-├── .gitignore               # Git ignore file
-├── LICENSE                  # Project license
-└── README.md                # Project documentation
-```
+- **Frontend**: React + React Router + Axios
+- **Backend**: Node.js + Express
+- **Database**: MongoDB (Mongoose)
+- **Auth**: JWT + GitHub OAuth
+- **Styling**: Tailwind CSS
 
-## Getting Started
+## Quick Start
 
 ### Prerequisites
-- Node.js (version 14 or later)
-- MongoDB or PostgreSQL server
-- Git
+- Node.js 14+
+- MongoDB (local or Atlas)
+- GitHub OAuth App credentials
 
-### Installation
+### 1. Clone & Install
 
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/yourusername/osct.git
-   cd osct
-   ```
+```bash
+git clone https://github.com/yourusername/osct.git
+cd osct
 
-2. **Install dependencies**
-   - For the server:
-   ```bash
-   cd server
-   npm install
-   ```
-   - For the client:
-   ```bash
-   cd ../client
-   npm install
-   ```
+# Install server dependencies
+cd server && npm install
 
-3. **Set up environment variables**
-   Create a `.env` file in the root directory and add the following:
-   ```
-   PORT=3000
-   MONGODB_URI=your_mongodb_uri
-   GITHUB_CLIENT_ID=your_github_client_id
-   GITHUB_CLIENT_SECRET=your_github_client_secret
-   ```
+# Install client dependencies
+cd ../client && npm install
+```
 
-4. **Run the application**
-   - Start the backend server:
-   ```bash
-   cd server
-   npm start
-   ```
-   - Start the frontend client:
-   ```bash
-   cd ../client
-   npm start
-   ```
+### 2. Environment Variables
 
-5. **Access the application**
-   Open your browser and go to `http://localhost:3000`.
+Copy `.env.example` to `.env` in the root:
 
-## API Documentation
+```
+PORT=5000
+MONGODB_URI=mongodb://localhost:27017/osct
+JWT_SECRET=your_super_secret_jwt_key
+GITHUB_CLIENT_ID=your_github_client_id
+GITHUB_CLIENT_SECRET=your_github_client_secret
+CLIENT_URL=http://localhost:3000
+```
 
-### User Endpoints
-- **GET /api/users**: Retrieve all users.
-- **POST /api/users**: Create a new user.
-- **GET /api/users/:id**: Retrieve a user by ID.
-- **PUT /api/users/:id**: Update user information.
-- **DELETE /api/users/:id**: Delete a user.
+### 3. Run the App
 
-### Project Endpoints
-- **GET /api/projects**: Retrieve all projects.
-- **POST /api/projects**: Create a new project.
-- **GET /api/projects/:id**: Retrieve a project by ID.
-- **PUT /api/projects/:id**: Update project information.
-- **DELETE /api/projects/:id**: Delete a project.
+```bash
+# In /server
+npm run dev
 
-### Contribution Endpoints
-- **GET /api/contributions**: Retrieve all contributions.
-- **POST /api/contributions**: Log a new contribution.
-- **GET /api/contributions/:id**: Retrieve a contribution by ID.
-- **PUT /api/contributions/:id**: Update contribution information.
-- **DELETE /api/contributions/:id**: Delete a contribution.
+# In /client (separate terminal)
+npm start
+```
 
-## Contributing
-We welcome contributions from everyone! To contribute:
-1. Fork the repository.
-2. Create a new branch (`git checkout -b feature/YourFeature`).
-3. Make your changes and commit them (`git commit -m 'Add some feature'`).
-4. Push to the branch (`git push origin feature/YourFeature`).
-5. Open a pull request.
+Visit `http://localhost:3000`
+
+## API Endpoints
+
+### Users
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| GET | /api/users | Get all users |
+| POST | /api/users | Create user |
+| GET | /api/users/:id | Get user by ID |
+| PUT | /api/users/:id | Update user |
+| DELETE | /api/users/:id | Delete user |
+
+### Projects
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| GET | /api/projects | Get all projects |
+| POST | /api/projects | Create project |
+| GET | /api/projects/:id | Get project by ID |
+| PUT | /api/projects/:id | Update project |
+| DELETE | /api/projects/:id | Delete project |
+
+### Contributions
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| GET | /api/contributions | Get all contributions |
+| POST | /api/contributions | Log a contribution |
+| GET | /api/contributions/:id | Get contribution by ID |
+| PUT | /api/contributions/:id | Update contribution |
+| DELETE | /api/contributions/:id | Delete contribution |
+
+### Auth
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| GET | /api/auth/github | Start GitHub OAuth |
+| GET | /api/auth/github/callback | GitHub OAuth callback |
+| POST | /api/auth/logout | Logout |
+| GET | /api/auth/me | Get current user |
+
+## Points System
+
+| Contribution Type | Points |
+|-------------------|--------|
+| Bug Fix | 10 |
+| Feature Addition | 25 |
+| Documentation | 5 |
+| Code Review | 8 |
+| Issue Report | 3 |
+| Test Addition | 12 |
 
 ## License
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
-## Contact
-For questions or suggestions, please reach out to [your-email@example.com].
+MIT License — see [LICENSE](LICENSE)
 
----
-
-Thank you for your interest in the Open Source Contribution Tracker! We look forward to your contributions and feedback.
