@@ -1,0 +1,7 @@
+{
+  "extends": "react-app",
+  "rules": {
+    "react/jsx-no-comment-textnodes": "warn",
+    "no-unused-vars": "warn"
+  }
+}
