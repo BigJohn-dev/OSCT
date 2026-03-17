@@ -18,15 +18,12 @@ export default function LeaderboardPage() {
   const [loading, setLoading] = useState(true);
   const [page, setPage] = useState(1);
   const [pages, setPages] = useState(1);
-  const [total, setTotal] = useState(0);
-
   const load = useCallback(async (p = 1) => {
     setLoading(true);
     try {
       const { data } = await leaderboardService.get({ period, page: p, limit: 20 });
       setLeaderboard(data.leaderboard);
       setPages(data.pages || 1);
-      setTotal(data.total || data.leaderboard.length);
       setPage(p);
     } catch {}
     setLoading(false);
@@ -40,7 +37,7 @@ export default function LeaderboardPage() {
       <div className="container">
         <div className="section-header">
           <div>
-            <h1 style={{ fontFamily: 'var(--font-mono)', fontSize: 28 }}>// Leaderboard</h1>
+            <h1 style={{ fontFamily: 'var(--font-mono)', fontSize: 28 }}>{'// Leaderboard'}</h1>
             <p style={{ color: 'var(--text-secondary)', marginTop: 4 }}>Top contributors ranked by points earned</p>
           </div>
         </div>

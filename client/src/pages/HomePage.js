@@ -70,7 +70,7 @@ export default function HomePage() {
       <section className="page">
         <div className="container">
           <div className="section-header">
-            <h2 className="section-title">// Featured Projects</h2>
+            <h2 className="section-title">{'// Featured Projects'}</h2>
             <Link to="/projects" className="btn btn-ghost btn-sm">All Projects →</Link>
           </div>
           {featured.length > 0 ? (
@@ -88,7 +88,7 @@ export default function HomePage() {
         <section style={{ background: 'var(--bg-secondary)', borderTop: '1px solid var(--border)', padding: '48px 0' }}>
           <div className="container">
             <div className="section-header">
-              <h2 className="section-title">// Top Contributors</h2>
+              <h2 className="section-title">{'// Top Contributors'}</h2>
               <Link to="/leaderboard" className="btn btn-ghost btn-sm">Full Leaderboard →</Link>
             </div>
             <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
@@ -111,7 +111,7 @@ export default function HomePage() {
       {/* How it works */}
       <section style={{ padding: '64px 0' }}>
         <div className="container">
-          <h2 className="section-title" style={{ textAlign: 'center', marginBottom: 48 }}>// How It Works</h2>
+          <h2 className="section-title" style={{ textAlign: 'center', marginBottom: 48 }}>{'// How It Works'}</h2>
           <div className="grid-3">
             {[
               { step: '01', title: 'Sign In', desc: 'Connect your GitHub account with one click to get started.' },

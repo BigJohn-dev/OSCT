@@ -74,7 +74,7 @@ export default function ContributionsPage() {
       <div className="container">
         <div className="section-header">
           <div>
-            <h1 style={{ fontFamily: 'var(--font-mono)', fontSize: 28 }}>// My Contributions</h1>
+            <h1 style={{ fontFamily: 'var(--font-mono)', fontSize: 28 }}>{'// My Contributions'}</h1>
             <p style={{ color: 'var(--text-secondary)', marginTop: 4 }}>{total} total contributions</p>
           </div>
           <button className="btn btn-primary" onClick={() => setShowForm(f => !f)}>
@@ -87,7 +87,7 @@ export default function ContributionsPage() {
         {/* Log Form */}
         {showForm && (
           <div className="card" style={{ marginBottom: 32 }}>
-            <h2 style={{ fontFamily: 'var(--font-mono)', fontSize: 18, marginBottom: 24 }}>// Log New Contribution</h2>
+            <h2 style={{ fontFamily: 'var(--font-mono)', fontSize: 18, marginBottom: 24 }}>{'// Log New Contribution'}</h2>
             {formError && <div className="alert alert-error">{formError}</div>}
             <form onSubmit={handleSubmit}>
               <div className="grid-2" style={{ marginBottom: 20 }}>
